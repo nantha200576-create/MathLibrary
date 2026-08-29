@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="D:/SWE40006 - Software Deployment and Evolution - C1/Deployment Portfolio Tasks (40%)/Deployment Portfolio Task 1/Deployment Task 1/MathLibrary/MathLibrary/MathLibrary.csproj" />
+  <Project Path="D:/SWE40006 - Software Deployment and Evolution - C1/Deployment Portfolio Tasks (40%)/Deployment Portfolio Task 1/Deployment Task 1/MathLibrary/MyCustomApp/MyCustomApp.csproj" Id="2d523215-da62-4b54-8d88-3bd4245cb0e9" />
+  <Project Path="D:/SWE40006 - Software Deployment and Evolution - C1/Deployment Portfolio Tasks (40%)/Deployment Portfolio Task 1/Deployment Task 1/MathLibrary/SwinburneMathLib/SwinburneMathLib.csproj" Id="23ad2821-fc6a-48e2-9cee-5ffe204c13a9" />
+  <Project Path="D:/SWE40006 - Software Deployment and Evolution - C1/Deployment Portfolio Tasks (40%)/Deployment Portfolio Task 1/Deployment Task 1/MathLibrary/WiXInstaller/WiXInstaller.wixproj" Id="8fb6e520-4ed0-4658-acda-5075a0471dba">
+    <Platform Project="x86" />
+    <Build />
+  </Project>
+</Solution>

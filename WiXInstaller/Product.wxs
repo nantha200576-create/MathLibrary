@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Math Calculator" Language="1033" Version="1.0.0.0" 
+           Manufacturer="NanthaKumara A/L Ganesan" UpgradeCode="78A69E12-2B41-45FA-922B-2A0123456789">
+    
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- ADD THIS: Enables the standard installer wizard UI -->
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UIRef Id="WixUI_InstallDir" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="MathCalculatorDeployment" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+
+    <DirectoryRef Id="INSTALLFOLDER">
+      <!-- Main Application Executable -->
+      <Component Id="MainExecutable" Guid="3A9F5E12-4C3D-4123-B890-123456789ABC">
+        <File Id="AppExe" Source="..\MyCustomApp\bin\Release\MyCustomApp.exe" KeyPath="yes">
+          <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="Math Calculator" 
+                    WorkingDirectory="INSTALLFOLDER" IconIndex="0" Advertise="yes" />
+        </File>
+      </Component>
+      <!-- Class Library Dependency DLL -->
+      <Component Id="MathLibraryDll" Guid="9B8C7D65-4E3F-2109-8765-43210FEDCBA9">
+        <File Id="MathDll" Source="..\MyCustomApp\bin\Release\MathLibrary.dll" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="ProductFeature" Title=" Math Calculator" Level="1">
+      <ComponentRef Id="MainExecutable" />
+      <ComponentRef Id="MathLibraryDll" />
+    </Feature>
+  </Product>
+</Wix>
