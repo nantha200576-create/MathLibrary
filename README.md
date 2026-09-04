@@ -1,8 +1,8 @@
 
 ## Student Details
-Name : NanthaKumara A/L Ganesan
-Student id : 106214014
-Title : Deployment task 1 (SWE40006)
+1.Name : NanthaKumara A/L Ganesan
+2.Student id : 106214014
+3.Title : Deployment task 1 (SWE40006)
 
 ## Deployment Steps
 1. Clone or download the repository.
